@@ -45,14 +45,15 @@ with open(filename, 'rb') as attachment:
     image = MIMEBase('application', 'octet-stream')
     image.set_payload(attachment.read())
 
-encoders.encode_base64(part3)
-image.add_header('Content-Disposition', f'attachment; filename={filename}')
-
+encoders.encode_base64(image)
+image.add_header("Content-Disposition", f"attachment; filename={filename}",)
 
 msg.attach(text)
 msg.attach(html)
 msg.attach(image)
+
 context = ssl.create_default_context()
+
 try: 
     server = smtplib.SMTP(smtp_server, port)
     server.ehlo()
