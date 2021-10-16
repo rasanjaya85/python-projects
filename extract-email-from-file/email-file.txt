@@ -1,0 +1,6 @@
+Input  : Hello shubhamg199630@gmail.com Rohit neeraj@gmail.com
+Output : shubhamg199630@gmail.com neeraj@gmail.com
+Here we have only selected email from the given input string
+Input : My 2 favourite numbers are 7 and 10
+Output :2 7 10
+Here we have selected only digits.
