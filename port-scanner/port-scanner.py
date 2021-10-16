@@ -1,8 +1,11 @@
 #! /usr/bin/env/python3 
+"""
+The port scanner script use for find the out the open ports on the target machine.
+"""
 
 from io import open_code
-import socket 
 from queue import Empty, Queue
+import socket 
 import threading
 
 
@@ -33,7 +36,6 @@ def get_ports(mode):
 	elif mode == 4:
 		ports = input("Enter your ports (seperate by blank):")
 		ports = ports.split()
-		print(type(ports))
 		ports = list(map(int, ports))
 		for port in ports: 
 			queue.put(port)
@@ -43,10 +45,10 @@ def worker():
 	while not queue.empty():
 		port = queue.get()
 		if 	portscan(port):
-			print("Port {} is open!".format(port))
+			print("The port {} is open!".format(port))
 			open_ports.append(port)
 		else:
-			print("Port {} is closed!".format(port))
+			print("The port {} is closed!".format(port))
 
 
 def run_scanner(threads, mode):
@@ -64,8 +66,10 @@ def run_scanner(threads, mode):
 	for thread in thread_list:
 		thread.join()
 
-	print("Open ports are:", open_ports)
+	print("The open ports are:", open_ports)
 
-run_scanner(10, 3)
+
+
+run_scanner(100, 4)
 
 
