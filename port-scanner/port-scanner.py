@@ -47,9 +47,6 @@ def worker():
 		if 	portscan(port):
 			print("The port {} is open!".format(port))
 			open_ports.append(port)
-		else:
-			print("The port {} is closed!".format(port))
-
 
 def run_scanner(threads, mode):
 
@@ -65,11 +62,6 @@ def run_scanner(threads, mode):
 	
 	for thread in thread_list:
 		thread.join()
-
 	print("The open ports are:", open_ports)
 
-
-
-run_scanner(100, 4)
-
-
+run_scanner(100, 1)
