@@ -1,9 +1,13 @@
-#!/usr/local/bin/python3
-
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Created By  : Rasanjaya Subasinghe
+# Created Date: Sun October 17 19:32:00 PDT 2021
+# =============================================================================
+"""The script has been crate for chat room"""
 
 import socket
 import threading
-
 
 host = '127.0.0.1'
 port = 55555
