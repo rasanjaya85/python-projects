@@ -1,7 +1,6 @@
 from youtube_statistics import YTstats
 
-# API_KEY = "AIzaSyCQm4GVgvjcL9py7dRMRyQbbQ7lvo_NUNg"
-API_KEY = "AIzaSyDWnu79suHr3doi_0KN1VoURCGpklaBdX0"
+API_KEY = "xxxxxxxxxxxxxxxxxxx"
 CHANNEL_ID = "UCbXgNpp0jedKWcQiULLbDTA"
 
 yt = YTstats(API_KEY, CHANNEL_ID)
